@@ -1,0 +1,24 @@
+<md-card>
+  <md-card-content>
+    <md-content class="md-no-momentum">
+      <form name="myForm" novalidate ng-submit="$ctrl.fetchInfo($ctrl.id)">
+        <md-input-container class="md-icon-float md-block">
+          <label>Id</label>
+          <md-icon md-svg-src="assets/svg/id-badge.svg" class="name"></md-icon>
+          <input ng-model="$ctrl.id" type="number" name="id" required>
+          <div ng-show="myForm.$submitted || myForm.id.$touched" style="text-align: end;color:red">
+            <div ng-show="myForm.id.$error.required">Please enter id .</div>
+          </div>
+        </md-input-container>
+        <div style="text-align: center"  ng-if="$ctrl.showSubmitbtn">
+          <!--ng-click="$ctrl.fetchInfo($ctrl.id)"-->
+          <md-button ng-disabled="myForm.id.$invalid" class="md-raised md-primary" type="submit" >Submit</md-button>
+        </div>
+
+      </form>
+
+
+    </md-content>
+
+  </md-card-content>
+</md-card>

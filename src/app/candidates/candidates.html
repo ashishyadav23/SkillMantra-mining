@@ -1,0 +1,13 @@
+<div class="main-container">
+    <fountain-header></fountain-header>
+    <main class="main">
+        <md-list flex>
+            <md-list-item ng-repeat=" candidate in $ctrl.candidateList">
+                <candidate candidate="candidate"></candidate>
+                <md-divider ng-if="!$last"></md-divider>
+
+            </md-list-item>
+        </md-list>
+    </main>
+    <fountain-footer></fountain-footer>
+</div>
